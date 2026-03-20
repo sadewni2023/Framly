@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>farmly</title>
+    <link rel="icon" type="image" href="../Images/Farmly Logo Main.png"> 
+    <link rel="stylesheet" href="../CSS/HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo-link">
+                    <!-- <span class="brand-first">farmly</span> -->
+                    <img src="../Images/Farmly Logo Main.png" alt="Logo" class="logo-image">
+                    <!-- <span class="brand-first"><b>green</b></span><span class="brand-second"><b>Mart.lk</b></span> -->
+                    <span class="brand-first">farmly</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <a href="HomePage.html" class="nav-item">Home</a>
+                    <a href="Table.html" class="nav-item">Table</a>
+                    <a href="profile.html" class="nav-item">User Profile</a>
+                    <a href="Feedback.html" class="nav-item">Feedback</a>
+                    <a href="Sitemap.html" class="nav-item">Sitemap</a>
+                    <a href="Team.html" class="nav-item">Team</a>
+                    
+                    <a href="Store.html" class="shop-button">
+                        <span>Shop Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Mobile Hamburger Button -->
+                <button 
+                    class="menu-button"
+                    onclick="toggleMobileMenu()"
+                    aria-label="Toggle navigation menu"
+                >
+                    <i id="menuIcon" class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu">
+                <div class="mobile-menu-items">
+                    <a href="HomePage.html" class="nav-item">Home</a>
+                    <a href="Table.html" class="nav-item">Table</a>
+                    <a href="profile.html" class="nav-item">User Profile</a>
+                    <a href="Feedback.html" class="nav-item">Feedback</a>
+                    <a href="Sitemap.html" class="nav-item">Sitemap</a>
+                    <a href="Team.html" class="nav-item">Team</a>
+                    <div class="mobile-buttons">
+                        <a href="Store.html" class="shop-button">
+                            <span>Shop Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+    <div class="Section-1">
+    <div id="hero" class="Mtext"><b>Discover the Natural Goodness with Us!</b></div>
+    
+    <div class="Mbutton">
+        <a href="Store.html" class="button"><b>Explore Freshness</b></a>
+        <div class="Stext1"><b>#Feel the Essence of <span class="highlight-green">PURE FRESHNESS.</span></b></div>
+
+    </div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="leftSide">            
+            <!-- Added New Content -->
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Organic & Fresh</h3>
+                <p>Direct from farms to your table, we guarantee maximum freshness and nutrition in every product.</p>
+              </div>
+            </div>
+            
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Fast Delivery</h3>
+                <p>We deliver all across Sri Lanka with next-day delivery options available.</p>
+              </div>
+            </div>
+            
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Supporting Farmers</h3>
+                <p>Every purchase directly supports local farmers and sustainable agriculture practices.</p>
+              </div>
+            </div>
+          </div>
+        <div class="rightSide">
+            <button class="navigation-arrow prev" onclick="previousSlide()"><i class="fas fa-chevron-left"></i></button>
+            <button class="navigation-arrow next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+
+            <div id="slide1" class="content-slide active">
+                <div class="image-container">
+                    <img src="../Images/IMG - 1.png" alt="Security illustration">
+                </div>
+                <h2>Your Organic Guarantee</h2>
+                <p>All products are certified organic and sourced directly from local farmers</p>
+            </div>
+
+            <div id="slide2" class="content-slide">
+                <div class="image-container">
+                    <img src="../Images/IMG - 2.png" alt="Communication illustration">
+                </div>
+                <h2>Farm Fresh Delivery</h2>
+                <p>We deliver fresh produce to your doorstep within 24 hours of harvest</p>
+            </div>
+
+            <div id="slide3" class="content-slide">
+                <div class="image-container">
+                    <img src="../Images/IMG - 3.png" alt="Collaboration illustration">
+                </div>
+                <h2>Support Local Farmers</h2>
+                <p>Every purchase supports sustainable farming practices and local Sri Lankan communities</p>
+            </div>
+
+            <div id="slide4" class="content-slide">
+                <div class="image-container">
+                    <img src="../Images/IMG - 4.png" alt="Recording illustration">
+                </div>
+                <h2>Quality You Can Trust</h2>
+                <p>We guarantee the freshness and quality of all our organic products</p>
+            </div>
+
+            <div class="indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+                <div class="indicator" onclick="goToSlide(3)"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="about" class="para">
+        <div class="about-content">
+            <span class="green-comma left-comma">,,</span>
+            <div class="about-text">
+                Welcome to farmly.lk, your gateway to the verdant wonders of Sri Lanka's organic bounty. 
+                Immerse yourself in a symphony of flavors and aromas sourced directly from our island's fertile soils. 
+                From the misty heights of our tea plantations to the sun-drenched fields of our spice gardens, 
+                each product at farmly.lk is a testament to our dedication to sustainability and purity. 
+                Discover the essence of Sri Lanka's harvest in every handpicked fruit, fragrant spice, and 
+                wholesome grain. Join us in embracing a healthier lifestyle while supporting local farmers 
+                and preserving our precious ecosystems. Indulge in the essence of nature's goodness with 
+                farmly.lk, where every bite tells a story of freshness, quality, and sustainability. 
+                Let your journey to wellness start here.
+    
+                Cultivate a healthier lifestyle with farmly.lk. From farm to table, we're committed to 
+                providing you with the finest organic produce sourced sustainably from Sri Lanka's fertile 
+                lands. Join us in supporting local farmers and preserving our environment. Shop with confidence. 
+                Shop with farmly.lk.
+            </div>
+            <span class="green-comma right-comma">,,</span>
+        </div>
+    </div>
+    
+<div class="minimal-testimonial-section">
+    <h2 class="testimonial-title">Testimonials</h2>
+    <p class="testimonial-subtitle">Let's hear what our customers have to say</p>
+    
+    <div class="testimonial-slider-container">
+        <div class="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide active">
+                <p class="testimonial-quote">"The organic vegetables from farmly.lk have transformed our family meals. The freshness is unmatched, and knowing they're grown without harmful chemicals gives me peace of mind."</p>
+                <p class="testimonial-author">Samantha Perera, Colombo</p>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-quote">"I've been ordering Sri Lankan spices from farmly.lk for my restaurant, and the quality is exceptional. My customers can taste the difference in every dish. Highly recommend!"</p>
+                <p class="testimonial-author">Ravi Mendis, Kandy</p>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-quote">"As someone who cares deeply about sustainability, I appreciate farmly.lk's commitment to eco-friendly packaging and supporting local farmers. Their organic fruits are the freshest I've ever tasted!"</p>
+                <p class="testimonial-author">Niroshi Fernando, Galle</p>
+            </div>
+        </div>
+        
+        <div class="testimonial-avatars">
+            <div class="avatar-container active" onclick="showTestimonial(0)">
+                <img src="../Images/Person 01.jpeg" alt="Customer" onerror="this.src='https://via.placeholder.com/60'">
+            </div>
+            <div class="avatar-container" onclick="showTestimonial(1)">
+                <img src="../Images/Person 02.jpeg" alt="Customer" onerror="this.src='https://via.placeholder.com/60'">
+            </div>
+            <div class="avatar-container" onclick="showTestimonial(2)">
+                <img src="../Images/Person 03.jpeg" alt="Customer" onerror="this.src='https://via.placeholder.com/60'">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="Stext2"><b>Surf in to Following Content Pages</b></div>
+    
+    <div id="gallery" class="template"> 
+        <div class="wrapper">
+            <div class="card">
+                <img src="../Images/Card - 1 - IMG.png" alt="Benefits">
+                <div class="info">
+                    <h1>Benefits</h1>
+                    <p>Discover the numerous health benefits of embracing organic foods.</p>
+                    <a href="ContentPageSanupa.html" class="butn">Read More</a>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="wrapper">
+            <div class="card">
+                <img src="../Images/Card - 2 - IMG.png" alt="Labels">
+                <div class="info">
+                    <h1>Labels</h1>
+                    <p>Explore the meaning behind organic labels and certifications.</p>
+                    <a href="ContentPageSadewni.html" class="butn">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card">
+                <img src="../Images/Card - 3 - IMG.png" alt="Lifestyle">
+                <div class="info">
+                    <h1>LifeStyle</h1>
+                    <p>Embrace a holistic organic lifestyle, integrating nutritious foods.</p>
+                    <a href="ContentPageDinura.html" class="butn">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card">
+                <img src="../Images/Card - 4 - IMG.png" alt="Practices">
+                <div class="info">
+                    <h1>Practices</h1>
+                    <p>Stay updated on the latest trends in organic farming practices.</p>
+                    <a href="content_ST3.html" class="butn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Bringing Nature's Best to Your Plate: Where Freshness Meets Flavor. We are team farmly.lk</p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> 076-327-9446</span>
+                    <span><i class="fas fa-envelope"></i> farmly@gmail.com</span>
+                    
+                     
+                    <a href="../HTML/EditorsPageSadewni.html" class="edited-by-btn">
+                        <span>Edited by: Sadewni Mendis </span>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                        <li><a href="Table.html">Table</a></li>
+                        <li><a href="user profile.html">User Profile</a></li>
+                        <li><a href="Feedback.html">Feedback</a></li>
+                        <li><a href="Sitemap.html">Sitemap</a></li>
+                        <li><a href="Team.html">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h3>Contact Us</h3>
+                <form action="#">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; farmly.lk | Designed by G25 - Group 5
+            <!-- <button class="edited-by-btn">Edited by: Your Name</button> -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+let currentTestimonialIndex = 0;
+const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+const avatarContainers = document.querySelectorAll(".avatar-container");
+
+function showTestimonial(index) {
+    // Update current index
+    currentTestimonialIndex = index;
+    
+    // Hide all testimonials
+    testimonialSlides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+    
+    // Show selected testimonial
+    testimonialSlides[index].classList.add("active");
+    
+    // Update avatar selection
+    avatarContainers.forEach(avatar => {
+        avatar.classList.remove("active");
+    });
+    
+    avatarContainers[index].classList.add("active");
+}
+
+// Auto rotate testimonials
+function rotateTestimonials() {
+    let nextIndex = (currentTestimonialIndex + 1) % testimonialSlides.length;
+    showTestimonial(nextIndex);
+}
+
+// Set interval for auto rotation (8 seconds)
+const testimonialInterval = setInterval(rotateTestimonials, 10000);
+
+// // Pause rotation when hovering over testimonial section
+// const testimonialSection = document.querySelector(".minimal-testimonial-section");
+// if (testimonialSection) {
+//     testimonialSection.addEventListener("mouseenter", () => {
+//         clearInterval(testimonialInterval);
+//     });
+    
+//     testimonialSection.addEventListener("mouseleave", () => {
+//         clearInterval(testimonialInterval);
+//         testimonialInterval = setInterval(rotateTestimonials, 8000);
+//     });
+// }
+
+// Initialize on page load
+document.addEventListener("DOMContentLoaded", function() {
+    showTestimonial(0);
+});
+
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll(".content-slide");
+        const indicators = document.querySelectorAll(".indicator");
+        
+        function updateSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove("active"));
+            // Show the current slide
+            slides[index].classList.add("active");
+            
+            // Update indicators
+            indicators.forEach(indicator => indicator.classList.remove("active"));
+            indicators[index].classList.add("active");
+        }
+        
+        function previousSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            updateSlide(currentSlideIndex);
+        }
+        
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            updateSlide(currentSlideIndex);
+        }
+        
+        function goToSlide(index) {
+            currentSlideIndex = index;
+            updateSlide(currentSlideIndex);
+        }
+        
+        // Auto-advance slides
+        setInterval(function() {
+            nextSlide();
+        }, 5000);
+
+        // Navbar functions
+        let isScrolled = false;
+        let isMenuOpen = false;
+
+        // Function to handle scroll
+        function handleScroll() {
+            isScrolled = window.scrollY > 20;
+            updateNavbarStyle();
+        }
+
+        // Function to update navbar style based on scroll position
+        function updateNavbarStyle() {
+            const navbar = document.querySelector('.main-nav');
+            if (isScrolled) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        // Function to toggle mobile menu
+        function toggleMobileMenu() {
+            isMenuOpen = !isMenuOpen;
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            if (isMenuOpen) {
+                mobileMenu.classList.add('open');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                mobileMenu.classList.remove('open');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            }
+        }
+
+        // Add event listeners
+        window.addEventListener('scroll', handleScroll);
+        
+        // Initialize navbar style on page load
+        handleScroll();
+    </script>
+</body>
+</html>

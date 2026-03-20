@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/Table.css">
+    <link rel="stylesheet" href="../CSS/Template.css">
+    <title>farmly.lk</title>
+    <link rel="icon" type="image" href="../Images/Icon.png"> 
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo-link">
+                    <img src="../Images/Farmly Logo Main.png" alt="Logo" class="logo-image">
+                    <span class="brand-first">farmly</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <a href="HomePage.html" class="nav-item">Home</a>
+                    <a href="Table.html" class="nav-item">Table</a>
+                    <a href="profile.html" class="nav-item">User Profile</a>
+                    <a href="Feedback.html" class="nav-item">Feedback</a>
+                    <a href="Sitemap.html" class="nav-item">Sitemap</a>
+                    <a href="Team.html" class="nav-item">Team</a>
+                    
+                    <a href="Store.html" class="shop-button">
+                        <span>Shop Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Mobile Hamburger Button -->
+                <button 
+                    class="menu-button"
+                    onclick="toggleMobileMenu()"
+                    aria-label="Toggle navigation menu"
+                >
+                    <i id="menuIcon" class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu">
+                <div class="mobile-menu-items">
+                    <a href="HomePage.html" class="nav-item">Home</a>
+                    <a href="Table.html" class="nav-item">Table</a>
+                    <a href="profile.html" class="nav-item">User Profile</a>
+                    <a href="Feedback.html" class="nav-item">Feedback</a>
+                    <a href="Sitemap.html" class="nav-item">Sitemap</a>
+                    <a href="Team.html" class="nav-item">Team</a>
+                    <div class="mobile-buttons">
+                        <a href="Store.html" class="shop-button">
+                            <span>Shop Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <h2>Vegetable & Fruit Shop - Profit Calculation</h2>
+    
+    <table id="profitTable">
+        <tr>
+            <th>Item</th>
+            <th>Image</th>
+            <th>Quantity (kg)</th>
+            <th>Amount Spent (Rs.)</th>
+            <th>Quantity Sold (kg)</th>
+            <th>Amount Earned (Rs.)</th>
+            <th>Profit (Rs.)</th>
+        </tr>
+        <tr>
+            <td>Tomatoes</td>
+            <td><img src="../Images/Tomatos.jpg" alt="Tomatoes"></td>
+            <td contenteditable="true" class="quantity">120</td>
+            <td contenteditable="true" class="spent">60</td>
+            <td contenteditable="true" class="sold">110</td>
+            <td contenteditable="true" class="earned">110</td>
+            <td class="profit">50</td>
+        </tr>
+        <tr>
+            <td>Watermelon</td>
+            <td><img src="../Images/melon.jpg" alt="Tomatoes"></td>
+            <td contenteditable="true" class="quantity">120</td>
+            <td contenteditable="true" class="spent">60</td>
+            <td contenteditable="true" class="sold">110</td>
+            <td contenteditable="true" class="earned">110</td>
+            <td class="profit">50</td>
+        </tr>
+        <tr>
+            <td>Beetroot</td>
+            <td><img src="../Images/Beetroot.jpg" alt="Apples"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Carrots</td>
+            <td><img src="../Images/Carrot.jpg" alt="Carrots"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>WoodApple</td>
+            <td><img src="../Images/woodapple.jpg" alt="Carrots"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+
+        <tr>
+            <td>Dragon Fruit</td>
+            <td><img src="../Images/dragonfruit.jpg" alt="Oranges"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Bananas</td>
+            <td><img src="../Images/banana.jpg" alt="Bananas"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Cucumber</td>
+            <td><img src="../Images/Cucumber.jpg" alt="Cucumber"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Pumpkin</td>
+            <td><img src="../Images/Pumpkin.jpg" alt="Pumpkin"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Sweet Potato</td>
+            <td><img src="../Images/SweetPotato.jpg" alt="Sweet Potato"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Cauliflower</td>
+            <td><img src="../Images/Cauliflower.jpg" alt="Cauliflower"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Green Beans</td>
+            <td><img src="../Images/GreenBeans.jpg" alt="Green Beans"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Cabbage</td>
+            <td><img src="../Images/Cabbage.jpg" alt="Cabbage"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr>
+            <td>Potatoes</td>
+            <td><img src="../Images/Potatos.jpg" alt="Potatoes"></td>
+            <td contenteditable="true" class="quantity">100</td>
+            <td contenteditable="true" class="spent">90</td>
+            <td contenteditable="true" class="sold">95</td>
+            <td contenteditable="true" class="earned">140</td>
+            <td class="profit">50</td>
+        </tr>
+
+        <tr class="total-profit">
+            <td colspan="6">Total Profit</td>
+            <td id="totalProfit">600</td>
+        </tr>
+    </table>
+    
+    <button onclick="scrollToTop()" class="scroll-to-top" id="scrollTopBtn">⬆</button>
+    <button onclick="goToEditor()" class="editor-button">Editor</button>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Bringing Nature's Best to Your Plate: Where Freshness Meets Flavor. We are team farmly.lk</p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> 076-327-9446</span>
+                    <span><i class="fas fa-envelope"></i> farmly@gmail.com</span>
+                    <a href="../HTML/EditorsPageSadewni.html" class="edited-by-btn">
+                        <span>Edited by: Sadewni Mendis </span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                        <li><a href="Table.html">Table</a></li>
+                        <li><a href="user profile.html">User Profile</a></li>
+                        <li><a href="Feedback.html">Feedback</a></li>
+                        <li><a href="Sitemap.html">Sitemap</a></li>
+                        <li><a href="Team.html">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h3>Contact Us</h3>
+                <form action="#">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; farmly.lk | Designed by G25 - Group 5
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer> 
+    
+    <script>
+        function calculateProfit() {
+            let totalProfit = 0;
+            document.querySelectorAll("#profitTable tr").forEach((row, index) => {
+                if (index === 0 || index === document.querySelectorAll("#profitTable tr").length - 1) return;
+                let spent = parseFloat(row.querySelector(".spent").textContent) || 0;
+                let earned = parseFloat(row.querySelector(".earned").textContent) || 0;
+                let profitCell = row.querySelector(".profit");
+                let profit = earned - spent;
+                profitCell.textContent = profit.toFixed(2);
+                totalProfit += profit;
+            });
+            document.getElementById("totalProfit").textContent = totalProfit.toFixed(2);
+        }
+        
+        document.querySelectorAll("td[contenteditable=true]").forEach(cell => {
+            cell.addEventListener("input", calculateProfit);
+            cell.addEventListener("keypress", function(event) {
+                // Allow only numbers, decimal point, and backspace
+                if (!/[0-9.]/.test(event.key) && event.key !== "Backspace") {
+                    event.preventDefault();
+                }
+                // Prevent multiple decimal points
+                if (event.key === "." && this.textContent.includes(".")) {
+                    event.preventDefault();
+                }
+            });
+        });
+        
+        window.onscroll = function() {
+            var scrollButton = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function goToEditor() {
+            window.location.href = "EditorsPageSadewni.html";
+        }
+
+        // Navbar functionality
+        let isScrolled = false;
+        let isMenuOpen = false;
+
+        // Function to handle scroll
+        function handleScroll() {
+            isScrolled = window.scrollY > 20;
+            updateNavbarStyle();
+        }
+
+        // Function to update navbar style based on scroll position
+        function updateNavbarStyle() {
+            const navbar = document.querySelector('.main-nav');
+            if (isScrolled) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        // Function to toggle mobile menu
+        function toggleMobileMenu() {
+            isMenuOpen = !isMenuOpen;
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            if (isMenuOpen) {
+                mobileMenu.classList.add('open');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                mobileMenu.classList.remove('open');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            handleScroll();
+            calculateProfit(); // Calculate profit on page load
+        });
+    </script>
+</body>
+</html>
